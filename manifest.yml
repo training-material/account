@@ -1,0 +1,14 @@
+---
+timeouut: 180
+instances: 1
+memory: 1GB
+env:
+    SPRING_PROFILES_DEFAULT: cloud
+    
+applications:
+- name: spring-mkplace-host
+
+  domain: cfapps.io
+  path: target/account-1.0.0-SNAPSHOT.jar
+  services: [mydb,rabbit,sendgrid] 
+  
